@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="hibernate.connection.username">scott</property>
+		<property name="hibernate.connection.password">tiger</property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		
+		<!-- 是否显示sql -->
+		<property name="show_sql">true</property>
+		<!-- 是否格式化sql -->
+		<property name="format_sql">true</property>
+
+		<!-- 实体类xml文件路径 -->
+		<mapping resource="com/qin/pojo/Teacher.hbm.xml"/>
+		<mapping resource="com/qin/pojo/Student.hbm.xml"/>
+		
+		
+	</session-factory>
+	
+</hibernate-configuration>
+	
+	
+	
+	

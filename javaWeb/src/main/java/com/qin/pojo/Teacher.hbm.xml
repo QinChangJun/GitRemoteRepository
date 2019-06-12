@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+   <hibernate-mapping>
+   	<class name="com.qin.pojo.Teacher" table="teacher" >
+   		<!-- 主键生成策略 -->
+   		<id name="id" column="id" type="java.lang.String">
+   			
+   		</id>
+   		<property name="name" column="name" type="java.lang.String"></property>
+   		<property name="age" column="age" type="java.lang.String"></property>
+   		<property name="clazz" column="clazz" type="java.lang.String"></property>
+   		<property name="phone" column="phone" type="java.lang.String"></property>
+   		<property name="sex" column="sex" type="java.lang.String"></property>
+   		<property name="address" column="address" type="java.lang.String"></property>
+   		
+   		<set name="students" inverse="false">
+   			<key>
+   				<column name="tid"></column>
+   			</key>
+   			<one-to-many class="com.qin.pojo.Student" />
+   		</set>
+   	</class>
+   
+   </hibernate-mapping> 
+    
+    
+    
